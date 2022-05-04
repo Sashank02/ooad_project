@@ -4,4 +4,6 @@ from .models import CategoriesList,Books
 class CategoriesListRef(admin.ModelAdmin):
     list_display = ['category_name']
 admin.site.register(CategoriesList,CategoriesListRef)
-admin.site.register(Books)
+class BooksRef(admin.ModelAdmin):
+    list_display = ['id','name','author','description','categorylist','subscription_cost','book_image']
+admin.site.register(Books,BooksRef)
